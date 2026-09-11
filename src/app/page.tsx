@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { BuyBlueprintButton } from "@/components/BuyBlueprintButton";
 
 const auditPoints = [
   {
@@ -284,27 +285,14 @@ export default function AgenticArchitectureLanding() {
             {submitted ? (
               <div className="rounded-lg border border-cyan-500/40 bg-cyan-950/50 p-5 text-left">
                 <div className="font-mono text-sm font-semibold text-cyan-300">
-                  ✓ Audit access unlocked
+                  ✓ Check your inbox
                 </div>
+
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
-                  Your architecture kit is ready. Check your inbox, or click
-                  below to start your direct download now:
+                  We've sent you a confirmation email. Click the link in that
+                  email to confirm your subscription and get your Agentic
+                  Architecture Kit.
                 </p>
-                <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                  <a
-                    href="/downloads/agentic-architecture-kit.zip"
-                    download
-                    className="inline-flex items-center justify-center rounded-lg bg-cyan-500 px-5 py-2.5 text-xs font-mono font-bold text-slate-950 transition hover:bg-cyan-400"
-                  >
-                    Download Kit (.ZIP) ↓
-                  </a>
-                  <a
-                    href="#audit"
-                    className="inline-flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 text-xs font-mono text-slate-300 transition hover:bg-slate-800"
-                  >
-                    Review 10 Checks →
-                  </a>
-                </div>
               </div>
             ) : (
               <form
@@ -823,13 +811,7 @@ export default function AgenticArchitectureLanding() {
                   </p>
                 </div>
 
-                {/* Temporary MVP destination until checkout exists */}
-                <a
-                  href="mailto:contact@getblueprintos.com?subject=Agentic%20Architecture%20Blueprint"
-                  className="inline-flex items-center justify-center rounded-lg bg-cyan-500 px-8 py-3.5 font-sans text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
-                >
-                  Get the Blueprint →
-                </a>
+                <BuyBlueprintButton />
               </div>
             </div>
           </div>
